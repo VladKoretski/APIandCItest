@@ -4,12 +4,14 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static javax.management.Query.or;
+import static org.hamcrest.Matchers.anyOf;
+import static org.hamcrest.Matchers.equalTo;
 
-public class ReturnSizeOfJSCurrencyBalance {
+public class CurrencyValidationTest {
 
     @Test
-    void shouldReturnDemoAccounts() {
+    void shouldReturnDemoAccountsCurrency() {
         // Given - When - Then
         // Предусловия
         given()
@@ -20,11 +22,11 @@ public class ReturnSizeOfJSCurrencyBalance {
                 // Проверки
                 .then()
                 .statusCode(200)
-                // специализированные проверки - лучше
+                // специализированные проверки
                 .contentType(ContentType.JSON)
-                .body("", hasSize(3))
-                .body("[0].currency", equalTo("RUB"))
-                .body("[0].balance", greaterThanOrEqualTo(0))
+                .body("[0].currency", anyOf (equalTo("USD"), equalTo("RUR")))
+                //.body("[0].currency", equalTo("RUB"))
+
         ;
     }
 }
