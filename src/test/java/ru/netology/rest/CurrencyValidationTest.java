@@ -24,7 +24,7 @@ public class CurrencyValidationTest {
                 .statusCode(200)
                 // специализированные проверки
                 .contentType(ContentType.JSON)
-                .body("[0].currency", anyOf (equalTo("USD"), equalTo("RUR")))
+                .body("[0].currency", anyOf (equalTo("USD"), equalTo("RUB")))
                 //.body("[0].currency", equalTo("RUB"))
 
         ;
