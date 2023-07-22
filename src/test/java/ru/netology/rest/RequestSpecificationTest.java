@@ -8,15 +8,14 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-class MobileBankApiTestV6 {
-    private RequestSpecification requestSpec = new RequestSpecBuilder()
-            .setBaseUri("http://localhost")
-            .setBasePath("/api/v1")
-            .setPort(9999)
-            .setAccept(ContentType.JSON)
-            .setContentType(ContentType.JSON)
-            .log(LogDetail.ALL)
-            .build();
+public class RequestSpecificationTest {    private final RequestSpecification requestSpec = new RequestSpecBuilder()
+        .setBaseUri("http://localhost")
+        .setBasePath("/api/v1")
+        .setPort(9999)
+        .setAccept(ContentType.JSON)
+        .setContentType(ContentType.JSON)
+        .log(LogDetail.ALL)
+        .build();
 
     @Test
     void shouldReturnDemoAccounts() {
