@@ -1,4 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/3q4jxlp16jc2js90/branch/main?svg=true)](https://ci.appveyor.com/project/VladKoretski/apiandcitest/branch/main)
+[![Build status](https://ci.appveyor.com/api/projects/status/f89xnvqey3gk9ycn/branch/main?svg=true)](https://ci.appveyor.com/project/VladKoretski/apiandcitest-9jaj9/branch/main)
   
 
 # Домашнее задание к занятию «1.2. Тестирование API, CI»
