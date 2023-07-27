@@ -4,7 +4,6 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static javax.management.Query.or;
 import static org.hamcrest.Matchers.anyOf;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -24,9 +23,8 @@ public class CurrencyValidationTest {
                 .statusCode(200)
                 // специализированные проверки
                 .contentType(ContentType.JSON)
-                .body("[0].currency", anyOf (equalTo("USD"), equalTo("RUB")))
-                //.body("[0].currency", equalTo("RUB"))
-
+                .body("[0].currency", anyOf(equalTo("USB"), equalTo("RUR")))
+                .body("[1].currency", anyOf(equalTo("USD"), equalTo("RUB")))
         ;
     }
 }
