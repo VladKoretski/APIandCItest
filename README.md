@@ -1,4 +1,4 @@
-*тест упал с неправильными заданными видами валют*
+*тест упал с неправильными заданными видами валют*  
 [![Build status](https://ci.appveyor.com/api/projects/status/w4fsd38r6ijjex64/branch/main?svg=true)](https://ci.appveyor.com/project/VladKoretski/apiandcitest-uikfc/branch/main)
 
 
